@@ -39,20 +39,10 @@ int main()
     while(window.isOpen())
     {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // Close window: exit
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-
-            // Escape pressed: exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-                window.close();
-            }
+        player.moveSnake(&food, player.control());
+        while(window.pollEvent(event)){
+        if(event.type == sf::Event::Closed) window.close();
         }
-
-        // Clear screen
         window.clear();
         //window.draw(playe);
         //while(player.)

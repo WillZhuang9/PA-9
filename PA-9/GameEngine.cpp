@@ -11,6 +11,7 @@
 #include "GameEngine.h"
 sf::RectangleShape getRectangleAt(sf::Vector2f location, sf::Color color)
 {
+    sf::RectangleShape item (sf::Vector2f (10, 10));
     item.setFillColor(color);
     item.setPosition(location);
     return item;
